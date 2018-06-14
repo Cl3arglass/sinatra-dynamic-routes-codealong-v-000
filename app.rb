@@ -20,4 +20,11 @@ class App < Sinatra::Base
     "Goodbye, #{@user_name}."
   end
 
+  get '/multiply/:num1/:num2' do
+  @multiply = all_the_multipliers.select do |multiply|
+    multiply.num1 == params[:num1]
+    multiply.num2 == params[:num2]
+  end.first
+
+
 end
