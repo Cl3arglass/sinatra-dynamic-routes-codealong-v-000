@@ -21,11 +21,14 @@ class App < Sinatra::Base
   end
 
   get '/multiply/:num1/:num2' do
-  @multiple = params.select do |multiply|
-    multiple.num1 == params[:num1]
-    multiple.num2 == params[:num2]
-  end.first
-  erb :'/multiply/show.html'
+  # @multiple = params.select do |multiply|
+  #   multiple.num1 == params[:num1]
+  #   multiple.num2 == params[:num2]
+  # end.first
+  # erb :'/multiply/show.html'
+  @multiple1 = params[:num1]
+  @multiple2 = params[:num2]
+  "#{@multiple1 * @multiple2}"
 end
 
 
