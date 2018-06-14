@@ -25,6 +25,7 @@ class App < Sinatra::Base
     multiply.num1 == params[:num1]
     multiply.num2 == params[:num2]
   end.first
+end 
 
 
 end
