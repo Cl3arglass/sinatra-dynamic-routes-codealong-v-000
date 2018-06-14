@@ -28,7 +28,7 @@ class App < Sinatra::Base
   # erb :'/multiply/show.html'
   @multiple1 = params[:num1]
   @multiple2 = params[:num2]
-  "#{@multiple1 * @multiple2}"
+  "#{@multiple1.to_i * @multiple2.to_i}"
 end
 
 
