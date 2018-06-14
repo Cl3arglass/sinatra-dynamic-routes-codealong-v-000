@@ -21,7 +21,7 @@ class App < Sinatra::Base
   end
 
   get '/multiply/:num1/:num2' do
-  @multiple = all_the_multipliers.select do |multiply|
+  @multiple = params.select do |multiply|
     multiple.num1 == params[:num1]
     multiple.num2 == params[:num2]
   end.first
